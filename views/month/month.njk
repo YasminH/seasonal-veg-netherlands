@@ -9,14 +9,14 @@ layout: base
 
 <h1>What's in season in {{ month.name }}?</h1>
 <h2>Vegetables</h2>
-<ul>
+<ul class="produce">
   {% for vegetable in month.vegetables %}
-    <li>{{ vegetable }}</li>
+    <li class="produce__item">{{ vegetable }}</li>
   {% endfor %}
 </ul>
 <h2>Fruit</h2>
-<ul>
+<ul class="produce">
   {% for fruit in month.fruit %}
-    <li>{{ fruit }}</li>
+    <li class="produce__item">{{ fruit }}</li>
   {% endfor %}
 </ul>
