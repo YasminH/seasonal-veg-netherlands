@@ -2,4 +2,4 @@
 layout: base
 ---
 
-This is the home page.
+# What's in season?

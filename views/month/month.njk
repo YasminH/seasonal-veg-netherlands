@@ -7,4 +7,16 @@ permalink: "/{{ month.name | slugify }}/"
 layout: base
 ---
 
-{{ month.name }}
+<h1>What's in season in {{ month.name }}?</h1>
+<h2>Vegetables</h2>
+<ul>
+  {% for vegetable in month.vegetables %}
+    <li>{{ vegetable }}</li>
+  {% endfor %}
+</ul>
+<h2>Fruit</h2>
+<ul>
+  {% for fruit in month.fruit %}
+    <li>{{ fruit }}</li>
+  {% endfor %}
+</ul>
