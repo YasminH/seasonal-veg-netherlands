@@ -2,10 +2,11 @@
   --primary: #f97b22;
   --text-color: #333;
   --secondary: #9ca777;
-  --seconary--dark: #7c9070;
   --tertiary: #f2e8cf;
+}
 
-  --desktop-breakpoint: 600px;
+html {
+  background-color: var(--tertiary);
 }
 
 body {
@@ -23,22 +24,27 @@ main {
 
 header {
   display: flex;
-}
+  grid-gap: 60px;
 
-h1 {
-  margin: 0;
+  a {
+    border-bottom: 2px solid var(--primary);
+
+    &:hover,
+    &:focus {
+      box-shadow: inset 0px -4px 0 var(--secondary);
+      border-bottom: none;
+    }
+  }
 }
 
 .home-link {
-  display: inline-block;
+  display: block;
   padding: 0.5rem 0.25rem;
   text-decoration: none;
   color: var(--text-color);
-  border-bottom: 1px solid var(--primary);
 
-  @media (min-width: 600px) {
-    margin-right: 10px;
-    padding: 0.75rem 0.5rem;
+  @media (min-width: 800px) {
+    padding: 0.2rem 0.5rem;
   }
 }
 
@@ -50,14 +56,14 @@ h1 {
   grid-gap: 0.75rem;
   list-style: none;
 
-  @media (min-width: 600px) {
+  @media (min-width: 800px) {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 .months {
   max-width: 320px;
-  margin: 0 auto;
+  margin: 0 0 0 auto;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -65,29 +71,26 @@ h1 {
   list-style: none;
   font-size: 0.9rem;
 
-  @media (min-width: 600px) {
+  @media (min-width: 800px) {
     display: flex;
     max-width: none;
     margin: 0;
     font-size: 1rem;
   }
-}
 
-.months__month {
-  overflow: hidden;
-}
+  .months__month {
+    display: flex;
+    position: relative;
+  }
 
-.months__link {
-  display: block;
-  padding: 0.5rem 0.25rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  text-decoration: none;
-  color: var(--text-color);
-  border-bottom: 1px solid var(--primary);
+  .months__link {
+    display: block;
+    padding: 0.5rem 0.25rem;
+    text-decoration: none;
+    color: var(--text-color);
 
-  @media (min-width: 600px) {
-    padding: 0.75rem 0.5rem;
+    @media (min-width: 800px) {
+      padding: 0.2rem 0.5rem;
+    }
   }
 }

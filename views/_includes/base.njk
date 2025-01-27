@@ -10,12 +10,12 @@
   <body>
     <header>
       <div>
-        <a href="/" class="home-link">🏠 Home</a>
+        <a href="/" class="home-link">Now</a>
       </div>
       <ul class="months">
         {% for i in months %}
           <li class="months__month">
-            <a href="/{{ i.name }}" class="months__link">{{ i.name }}</a>
+            <a href="/{{ i.name }}" class="months__link">{{ i.abbreviation }}</a>
           </li>
         {% endfor %}
       </ul>
