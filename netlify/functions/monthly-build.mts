@@ -1,6 +1,6 @@
 import type { Config } from "@netlify/functions"
 
-export default async (req: Request) => {
+export default async () => {
     const response = await fetch(`https://api.netlify.com/build_hooks/${process.env.BUILD_KEY}`, {
         method: 'POST'
     })
@@ -13,5 +13,5 @@ export default async (req: Request) => {
 }
 
 export const config: Config = {
-    schedule: "@hourly"
+    schedule: "@monthly"
 }
