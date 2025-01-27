@@ -13,6 +13,7 @@ body {
   margin: 0;
   font-family: sans-serif;
   color: var(--text-color);
+  font-size: 1.2rem;
 }
 
 header,
@@ -69,13 +70,13 @@ header {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 0.5rem;
   list-style: none;
-  font-size: 0.9rem;
+  font-size: 0.9em;
 
   @media (min-width: 800px) {
     display: flex;
     max-width: none;
     margin: 0;
-    font-size: 1rem;
+    font-size: 1em;
   }
 
   .months__month {
